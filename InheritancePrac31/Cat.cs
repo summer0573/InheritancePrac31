@@ -27,3 +27,4 @@ namespace InheritancePrac31
             Public();
         }
     }
+}
