@@ -12,9 +12,35 @@ namespace InheritancePrac31
 
         class Parent
         {
+            public static int counter = 0;
             public Parent() { Console.WriteLine("부모 생성자"); }
             public Parent(int param) { Console.WriteLine("Parant (int param)"); }
             public Parent(string param) { Console.WriteLine("Parent(string param)"); }
+
+            public void ContParent()
+            {
+                Parent.counter++;
+            }
+        }
+
+        public Child : Parent
+            {
+                public void CountChild() { Child.counter++; }
+                public Child() : base(10)
+                {
+                    Console.WriteLine("Child():base(10");
+                }
+                public Child(string input) : base(input)
+                {
+                    Console.WriteLine("Child(string input):base(input)");
+                }
+            }
+
+    class Child : Parent { 
+            public void CountChild()
+            {
+                Child.counter++;
+            }
         }
 
         class Child : Parent
