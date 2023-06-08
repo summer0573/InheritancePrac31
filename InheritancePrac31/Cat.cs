@@ -6,10 +6,6 @@ namespace InheritancePrac31
     {
         public int Age { get; set; }
 
-        public Cat()
-        {
-            this.Age = 0;
-        }
         public void Eat()
         {
             Console.WriteLine("뇸뇸뇸뇸");
@@ -23,4 +19,11 @@ namespace InheritancePrac31
         {
             Console.WriteLine("냥냥냥냥");
         }
-}
+
+        public void TestB()
+        {
+            //Private();
+            Protected();
+            Public();
+        }
+    }

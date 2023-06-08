@@ -23,6 +23,14 @@ namespace InheritancePrac31
                 item.Eat();
                 item.Sleep();
 
+                if(item is Dog)
+                {
+                    ((Dog)item).bark();
+                } else if(item is Cat)
+                {
+                    ((Cat)item).Meow();
+                }
+
                 ((Dog)item).bark();
                 ((Cat)item).Meow();
             }
